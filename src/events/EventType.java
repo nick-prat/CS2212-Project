@@ -11,5 +11,5 @@ package events;
  *  
  */
 public enum EventType {
-	TypeB, TypeA
+	TypeB, TypeA, TypeC
 }
