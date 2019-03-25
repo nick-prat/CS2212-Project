@@ -15,7 +15,11 @@ public class ChannelEventDispatcher {
 
 	private ChannelPoolManager cpManager;
 	
+	private static ChannelEventDispatcher instance = null;
+	
 	public static ChannelEventDispatcher getInstance() {
+		if (instance == null)
+			instance = new ChannelEventDispatcher();
 		return instance;
 	}
 
