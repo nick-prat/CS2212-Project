@@ -13,7 +13,11 @@ public class SubscriptionManager {
 
 	private ChannelPoolManager cpManager;
 	
+	private static SubscriptionManager instance = null;
+	
 	public static SubscriptionManager getInstance() {
+		if (instance == null)
+			instance = new SubscriptionManager();
 		return instance;
 	}
 	

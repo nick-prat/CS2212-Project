@@ -18,8 +18,12 @@ import subscribers.AbstractSubscriber;
  */
 public class ChannelAccessControl {
 
+	private static ChannelAccessControl instance = null;	
 	
 	protected static ChannelAccessControl getInstance() {
+
+		if(instance == null)
+			instance = new ChannelAccessControl();
 		return instance;
 	}
 	Map<String, List<AbstractSubscriber>> blackList = new HashMap<>();
